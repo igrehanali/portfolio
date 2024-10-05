@@ -9,7 +9,7 @@ To run this project locally, follow these steps:
 ### 1. Clone the Repository:
 
 ```bash
-git clone https://github.com/yourusername/your-portfolio.git
+git clone https://github.com/igrehanali/portfolio
 cd your-portfolio
 ```
 
@@ -17,11 +17,11 @@ cd your-portfolio
 
 npm install
 
-# or
+or
 
 yarn install
 
-# or
+or
 
 pnpm install
 
@@ -29,15 +29,15 @@ pnpm install
 
 npm run dev
 
-# or
+or
 
 yarn dev
 
-# or
+or
 
 pnpm dev
 
-# or
+or
 
 bun dev
 
@@ -57,8 +57,8 @@ Feel free to reach out via:
 
 - **Email**: [webwithrehan@gmail.com](mailto:webwithrehan@gmail.com)
 - **Phone**: [+92 3108917778](tel:+923108917778)
-- **GitHub**: [github.com/yourusername](https://github.com/yourusername)
-- **LinkedIn**: [linkedin.com/in/yourusername](https://linkedin.com/in/yourusername)
+- **GitHub**: [github.com/yourusername](https://github.com/igrehanali)
+- **LinkedIn**: [linkedin.com/in/yourusername](https://www.linkedin.com/in/muhammad-rehan-ali-541277263/)
 
 ## Learn More About the Technologies Used
 
