@@ -16,7 +16,13 @@ const toolbox = [
   { title: "GitHub", icon: Github },
 ];
 
-const ToolBoxIcon = ({ className }: { className?: string }) => {
+const ToolBoxIcon = ({
+  className,
+  itemWrapperClassName,
+}: {
+  className?: string;
+  itemWrapperClassName?: string;
+}) => {
   return (
     <div
       className={twMerge(
@@ -24,7 +30,12 @@ const ToolBoxIcon = ({ className }: { className?: string }) => {
         className
       )}
     >
-      <div className="flex flex-none  py-0.5 gap-6">
+      <div
+        className={twMerge(
+          "flex flex-none  py-0.5 gap-6 pr-6",
+          itemWrapperClassName
+        )}
+      >
         {toolbox.map((tool) => (
           <div
             key={tool.title}
