@@ -6,6 +6,7 @@ import React from "@/assets/icons/react.svg";
 import Github from "@/assets/icons/github.svg";
 import TechIcon from "@/components/TechIcon";
 import { twMerge } from "tailwind-merge";
+import { Fragment } from "react";
 
 const toolbox = [
   { title: "JavaScript", icon: Javascript },
@@ -32,18 +33,22 @@ const ToolBoxIcon = ({
     >
       <div
         className={twMerge(
-          "flex flex-none  py-0.5 gap-6 pr-6",
+          "flex flex-none  py-0.5 gap-6 pr-6 my-1",
           itemWrapperClassName
         )}
       >
-        {toolbox.map((tool) => (
-          <div
-            key={tool.title}
-            className="inline-flex items-center gap-2 py-2 px-3 outline outline-2 outline-white/10 rounded-lg"
-          >
-            <TechIcon component={tool.icon} />
-            <span className="font-semibold">{tool.title}</span>
-          </div>
+        {[...new Array(2)].fill(0).map((_, index) => (
+          <Fragment key={index}>
+            {toolbox.map((tool) => (
+              <div
+                key={tool.title}
+                className="inline-flex items-center gap-2 py-2 px-3 outline outline-2 outline-white/10 rounded-lg"
+              >
+                <TechIcon component={tool.icon} />
+                <span className="font-semibold">{tool.title}</span>
+              </div>
+            ))}
+          </Fragment>
         ))}
       </div>
     </div>
