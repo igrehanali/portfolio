@@ -57,7 +57,7 @@ export const TestimonialsSection = () => {
             {testimonials.map((testimonial) => (
               <Card
                 key={testimonial.name}
-                className="max-w-xs md:p-8 md:max-w-md"
+                className="max-w-xs md:p-8 md:max-w-md p-6"
               >
                 <div
                   className="bg-gray-800 rounded-3xl p-6 relative z-0"
