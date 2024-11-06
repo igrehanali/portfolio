@@ -1,11 +1,10 @@
 import React from "react";
 
 interface TechIconProps {
-  component: React.ReactNode;
+  component: React.ElementType;
 }
 
-const TechIcon: React.FC<TechIconProps> = ({ component }) => {
-  const Component = component;
+const TechIcon: React.FC<TechIconProps> = ({ component: Component }) => {
   return (
     <>
       <Component className="size-10 fill-[url(#tech-icon-gradient)]" />
