@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Calistoga } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
+import AnimatedCursor from "react-animated-cursor";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const calistoga = Calistoga({
@@ -46,6 +47,36 @@ export default function RootLayout({
           "bg-gray-900 text-white antialiased font-sans"
         )}
       >
+        <AnimatedCursor
+          innerSize={8} // Size of the inner dot
+          outerSize={50} // Size of the outer circle
+          color="255, 255, 255" // RGB color for the dot (white for visibility)
+          outerAlpha={0.5} // Adjust opacity for the outer circle
+          innerScale={1} // No scaling on hover
+          outerScale={1} // No scaling on hover
+          clickables={[
+            "a",
+            'input[type="text"]',
+            'input[type="email"]',
+            'input[type="number"]',
+            'input[type="submit"]',
+            'input[type="image"]',
+            "label[for]",
+            "select",
+            "textarea",
+            "button",
+            ".link",
+          ]}
+          innerStyle={{
+            backgroundColor: "rgba(255, 255, 255, 1)", // Bright white for the inner dot
+          }}
+          outerStyle={{
+            background: "linear-gradient(to right, #34d399, #38bdf8)", // Emerald to Sky Blue gradient
+            border: "2px solid rgba(255, 255, 255, 0.5)", // Light border for visibility
+            backgroundColor: "transparent", // Make the outer circle transparent
+          }}
+        />
+
         {children}
       </body>
     </html>

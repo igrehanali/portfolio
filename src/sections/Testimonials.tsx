@@ -11,33 +11,33 @@ import { Fragment } from "react";
 
 const testimonials = [
   {
-    name: "Alex Turner",
-    position: "Marketing Manager @ TechStartups",
-    text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
+    name: "James Wu",
+    position: "Product Owner @ ShipEasy",
+    text: "Rehan's skills in Next.js and Tailwind CSS helped elevate our platform to a new level of user experience. His ability to translate our ideas into a seamless interface has made a significant impact on user engagement.",
     avatar: memojiAvatar1,
   },
   {
-    name: "Olivia Green",
-    position: "Head of Design @ GreenLeaf",
-    text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
+    name: "Sarah Ali",
+    position: "CTO @ Astute Solutions",
+    text: "Rehan was instrumental in developing the core of our POS project. His proficiency in React and attention to responsive design helped us deliver a powerful and user-friendly tool for our clients.",
     avatar: memojiAvatar2,
   },
   {
-    name: "Daniel White",
-    position: "CEO @ InnovateCo",
-    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
+    name: "Laura Kim",
+    position: "Head of Marketing @ GoGlobal",
+    text: "Working with Rehan was a game changer. His frontend expertise brought our brand vision to life on the website, resulting in a sharp, high-performance site that has already increased our lead conversions.",
     avatar: memojiAvatar3,
   },
   {
-    name: "Emily Carter",
-    position: "Product Manager @ GlobalTech",
-    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
+    name: "Ahmed Khan",
+    position: "CEO @ InnovateLab",
+    text: "Rehan's knowledge of Firebase and Next.js made it easy to integrate complex features on our site. His proactive approach and problem-solving skills helped us create a scalable and reliable platform.",
     avatar: memojiAvatar4,
   },
   {
-    name: "Michael Brown",
-    position: "Director of IT @ MegaCorp",
-    text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
+    name: "Emily Reyes",
+    position: "Design Lead @ GreenWave",
+    text: "Rehan is an exceptional developer! His ability to bring our designs to life with precision and style is amazing. Our users love the responsiveness and feel of the new site thanks to his efforts.",
     avatar: memojiAvatar5,
   },
 ];
@@ -45,7 +45,7 @@ const testimonials = [
 export const TestimonialsSection = () => {
   return (
     <div className="py-16 lg:py-24">
-      <div className=" container">
+      <div className="">
         <SectionHeader
           eyebrow="Happy Clients"
           title="What Clients Say about Me"
@@ -53,26 +53,27 @@ export const TestimonialsSection = () => {
         experiences working with me"
         />
 
-        <div className="flex  mt-12 lg:mt-20 overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
-          <div className=" flex flex-none gap-8 pr-8 animate-move-left [animation-duration:90s] hover:[animation-play-state:paused] ">
+        <div className="flex mt-12 lg:mt-20 overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
+          <div className="flex flex-none gap-8 pr-8 animate-move-left [animation-duration:90s] hover:[animation-play-state:paused]">
             {[...new Array(2)].fill(0).map((_, index) => (
               <Fragment key={index}>
                 {testimonials.map((testimonial) => (
                   <Card
                     key={testimonial.name}
-                    className="max-w-xs md:p-8 md:max-w-md p-6 hover:-rotate-3 transition duration-300"
+                    className="max-w-xs md:max-w-md p-6 md:p-8 flex flex-col justify-between hover:-rotate-3 transition duration-300"
                   >
                     <div
-                      className="bg-gray-800 rounded-3xl p-6 relative z-0"
+                      className="bg-gray-800 rounded-3xl p-6 relative z-0 h-full"
                       key={testimonial.name}
+                      style={{ minHeight: "300px" }} // Ensures consistent height for all cards
                     >
                       <div
-                        className=" absolute inset-0 opacity-5 z-10"
+                        className="absolute inset-0 opacity-5 z-10"
                         style={{
                           backgroundImage: `url(${greenImage.src})`,
                         }}
                       ></div>
-                      <div className=" flex gap-4 items-center">
+                      <div className="flex gap-4 items-center">
                         <div className="size-14 bg-gray-700 inline-flex items-center justify-center rounded-full flex-shrink-0">
                           <Image
                             src={testimonial.avatar}
@@ -80,16 +81,16 @@ export const TestimonialsSection = () => {
                             className="max-h-full"
                           />
                         </div>
-                        <div className="">
+                        <div>
                           <div className="font-semibold">
                             {testimonial.name}
                           </div>
-                          <div className=" text-sm text-white/40">
+                          <div className="text-sm text-white/40">
                             {testimonial.position}
                           </div>
                         </div>
                       </div>
-                      <p className=" mt-4 text-sm md:text-base md:mt-6">
+                      <p className="mt-4 text-sm md:text-base md:mt-6">
                         {testimonial.text}
                       </p>
                     </div>
