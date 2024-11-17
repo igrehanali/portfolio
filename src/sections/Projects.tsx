@@ -1,7 +1,7 @@
 import cover from "@/assets/images/Cover.png";
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import lightSaasLandingPage from "@/assets/images/project3.png";
+import aiStartupLandingPage from "@/assets/images/project1.png";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
@@ -22,27 +22,33 @@ const portfolioProjects = [
     image: cover,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Semester Project",
+    year: "2023",
+    title: "Recipes Sharing App",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Built a Full-Stack Recipe Sharing Platform" },
+      { title: "Responsive Recipe App with Dynamic Features" },
+      { title: "Enhanced UX for Recipe Sharing Platform" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
+    link: "https://recipe-rehan.netlify.app/",
     image: lightSaasLandingPage,
   },
   {
-    company: "Quantum Dynamics",
+    company: "Practice",
     year: "2023",
-    title: "AI Startup Landing Page",
+    title: "Django Clone",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      {
+        title:
+          "Streamlined frontend-backend communication for optimal performance",
+      },
+      { title: "Improved page load speed by 50%, enhancing user satisfaction" },
+      {
+        title:
+          "Achieved a 35% increase in mobile traffic through responsive design",
+      },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://dijango.netlify.app/",
     image: aiStartupLandingPage,
   },
 ];

@@ -47,7 +47,7 @@ export default function RootLayout({
           "bg-gray-900 text-white antialiased font-sans"
         )}
       >
-        <AnimatedCursor
+        {/* <AnimatedCursor
           innerSize={8} // Size of the inner dot
           outerSize={50} // Size of the outer circle
           color="255, 255, 255" // RGB color for the dot (white for visibility)
@@ -75,7 +75,7 @@ export default function RootLayout({
             border: "2px solid rgba(255, 255, 255, 0.5)", // Light border for visibility
             backgroundColor: "transparent", // Make the outer circle transparent
           }}
-        />
+        /> */}
 
         {children}
       </body>

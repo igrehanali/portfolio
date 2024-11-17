@@ -1,6 +1,9 @@
+"use client";
+
 import ArrowRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import { ContactModalComponent } from "@/components/contact-modal";
+
 export const ContactSection = () => {
   return (
     <div className="py-16 pt-12 lg:py-24 lg:pt-20">

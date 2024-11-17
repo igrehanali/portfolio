@@ -1,4 +1,5 @@
 import { DarkThemeFaq } from "@/components/dark-theme-faq";
+import { ImmersiveAboutMe } from "@/components/immersive-about-me";
 import { AboutSection } from "@/sections/About";
 import { ContactSection } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
@@ -14,7 +15,8 @@ export default function Home() {
     <div>
       <Header />
       <HeroSection />
-      <AboutSection />
+      <ImmersiveAboutMe />
+      {/* <AboutSection /> */}
       <ProjectsSection />
       <TapeSection />
       <TestimonialsSection />

@@ -71,7 +71,7 @@ export function DarkThemeFaq() {
   const closeAll = () => setOpenItems([]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100 p-6 sm:p-10">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100 p-6 sm:p-10 -z-10">
       <div className="max-w-3xl mx-auto">
         <SectionHeader
           eyebrow="Got Questions?"
