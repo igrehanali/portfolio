@@ -15,8 +15,10 @@ const ParticleField = ({ count = 5000 }) => {
   );
 
   useFrame((state, delta) => {
-    points.current.rotation.x -= delta / 10;
-    points.current.rotation.y -= delta / 15;
+    if (points.current) {
+      points.current.rotation.x -= delta / 10;
+      points.current.rotation.y -= delta / 15;
+    }
   });
 
   return (
