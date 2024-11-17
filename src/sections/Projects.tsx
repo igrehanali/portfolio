@@ -1,3 +1,4 @@
+import cover from "@/assets/images/Cover.png";
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
@@ -9,16 +10,16 @@ import SectionHeader from "@/components/SectionHeader";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "ASTUTE technologies",
+    year: "2024",
+    title: "Storage and File Sharing Platform",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Streamlined file management process" },
+      { title: "Improved user engagement with intuitive UI" },
+      { title: "Enhanced file sharing and collaboration by 30%" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://storage-management-solution.vercel.app/",
+    image: cover,
   },
   {
     company: "Innovative Co",
@@ -93,7 +94,7 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
+                  <a href={project.link} target="blank">
                     <button className=" bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 md:w-auto px-6">
                       <span>Visit Live Site</span>
                       <ArrowUpRight />

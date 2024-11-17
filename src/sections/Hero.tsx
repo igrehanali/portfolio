@@ -82,7 +82,7 @@ const orbits = [
 
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-10">
+    <div className="py-32 md:py-48 lg:py-60 relative z-10 overflow-hidden">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-5"
@@ -126,14 +126,15 @@ export const HeroSection = () => {
               Available for new projects
             </div>
           </div>
-          <div className="max-w-lg mx-auto">
+          <div className="max-w-xl mx-auto">
             <h1 className="font-serif text-3xl text-center mt-8 tracking-wide md:text-5xl">
-              Building Exceptional User Experience
+              Ready to Level Up Your Web Presence? Rehan at Your Service
             </h1>
             <p className="mt-4 text-center text-white/60 md:text-lg">
-              I am a skilled web developer focused on creating responsive and
-              visually appealing digital solutions. I bring ideas to life
-              through modern web technologies and engaging user experiences.
+              I am a web developer dedicated to building responsive and visually
+              striking websites. I will bring your ideas to life using modern
+              technology and ensure a seamless user experience. Let&apos;s make
+              it happen.
             </p>
           </div>
         </div>
