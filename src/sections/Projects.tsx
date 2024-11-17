@@ -1,4 +1,4 @@
-import cover from "@/assets/images/Cover.png";
+import cover from "@/assets/images/cover.png";
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import lightSaasLandingPage from "@/assets/images/project3.png";
 import aiStartupLandingPage from "@/assets/images/project1.png";
