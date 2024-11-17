@@ -68,8 +68,6 @@ export function DarkThemeFaq() {
     );
   };
 
-  const closeAll = () => setOpenItems([]);
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100 p-6 sm:p-10 -z-10">
       <div className="max-w-3xl mx-auto">
@@ -82,14 +80,8 @@ export function DarkThemeFaq() {
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
-              className="bg-gray-800 rounded-xl border border-gray-900 overflow-hidden shadow-lg"
+              className="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden shadow-lg"
               initial={false}
-              animate={{
-                backgroundColor: openItems.includes(index)
-                  ? "#1F2937"
-                  : "#1F2937",
-              }}
-              transition={{ duration: 0.3 }}
             >
               <motion.button
                 className="flex justify-between items-center w-full p-4 text-left focus:outline-none"
@@ -114,13 +106,9 @@ export function DarkThemeFaq() {
               <AnimatePresence initial={false}>
                 {openItems.includes(index) && (
                   <motion.div
-                    initial="collapsed"
-                    animate="open"
-                    exit="collapsed"
-                    variants={{
-                      open: { opacity: 1, height: "auto" },
-                      collapsed: { opacity: 0, height: 0 },
-                    }}
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
                     transition={{
                       duration: 0.3,
                       ease: [0.04, 0.62, 0.23, 0.98],
