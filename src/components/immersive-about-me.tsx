@@ -7,12 +7,14 @@ import { Points, PointMaterial } from "@react-three/drei";
 import SectionHeader from "./SectionHeader";
 import { random } from "maath";
 import { ContactModalComponent } from "./contact-modal";
+import * as THREE from "three";
 
 const ParticleField = ({ count = 5000 }) => {
-  const points = useRef();
+  // const points = useRef();
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(count * 3), { radius: 1.5 })
   );
+  const points = useRef<THREE.Points>(null); // Specify the ref type
 
   useFrame((state, delta) => {
     if (points.current) {
@@ -165,11 +167,11 @@ export function ImmersiveAboutMe() {
             </div>
           </div>
         </div>
-        {/* <footer className="text-center py-10">
+        <footer className="text-center py-10">
           <MagneticButton>
             Let&apos;s Create Something Extraordinary
           </MagneticButton>
-        </footer> */}
+        </footer>
         <div className=" text-center mt-10">
           <ContactModalComponent />
         </div>
