@@ -10,11 +10,14 @@ import { ContactModalComponent } from "./contact-modal";
 import * as THREE from "three";
 
 const ParticleField = ({ count = 5000 }) => {
-  // const points = useRef();
-  const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(count * 3), { radius: 1.5 })
-  );
   const points = useRef<THREE.Points>(null); // Specify the ref type
+
+  const [sphere] = useState<Float32Array>(
+    () =>
+      random.inSphere(new Float32Array(count * 3), {
+        radius: 1.5,
+      }) as Float32Array
+  );
 
   useFrame((state, delta) => {
     if (points.current) {
@@ -25,7 +28,7 @@ const ParticleField = ({ count = 5000 }) => {
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={points} positions={sphere} stride={4} frustumCulled={false}>
+      <Points ref={points} positions={sphere} stride={3} frustumCulled={false}>
         <PointMaterial
           transparent
           color="#fff"
@@ -46,44 +49,44 @@ const Scene = () => {
   );
 };
 
-const MagneticButton = ({ children }) => {
-  const ref = useRef(null);
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
+// const MagneticButton = ({ children }) => {
+//   const ref = useRef(null);
+//   const x = useMotionValue(0);
+//   const y = useMotionValue(0);
 
-  const springConfig = { damping: 15, stiffness: 150 };
-  const xSpring = useSpring(x, springConfig);
-  const ySpring = useSpring(y, springConfig);
+//   const springConfig = { damping: 15, stiffness: 150 };
+//   const xSpring = useSpring(x, springConfig);
+//   const ySpring = useSpring(y, springConfig);
 
-  const handleMouse = (e) => {
-    const rect = ref.current.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    const distanceX = e.clientX - centerX;
-    const distanceY = e.clientY - centerY;
-    x.set(distanceX / 2);
-    y.set(distanceY / 2);
-  };
+//   const handleMouse = (e) => {
+//     const rect = ref.current.getBoundingClientRect();
+//     const centerX = rect.left + rect.width / 2;
+//     const centerY = rect.top + rect.height / 2;
+//     const distanceX = e.clientX - centerX;
+//     const distanceY = e.clientY - centerY;
+//     x.set(distanceX / 2);
+//     y.set(distanceY / 2);
+//   };
 
-  const resetPosition = () => {
-    x.set(0);
-    y.set(0);
-  };
+//   const resetPosition = () => {
+//     x.set(0);
+//     y.set(0);
+//   };
 
-  return (
-    <motion.button
-      ref={ref}
-      style={{ x: xSpring, y: ySpring }}
-      onMouseMove={handleMouse}
-      onMouseLeave={resetPosition}
-      className="px-6 py-3  bg-gradient-to-r rounded-full text-lg font-semibold from-emerald-300 to-sky-400 text-gray-900"
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      {children}
-    </motion.button>
-  );
-};
+//   return (
+//     <motion.button
+//       ref={ref}
+//       style={{ x: xSpring, y: ySpring }}
+//       onMouseMove={handleMouse}
+//       onMouseLeave={resetPosition}
+//       className="px-6 py-3  bg-gradient-to-r rounded-full text-lg font-semibold from-emerald-300 to-sky-400 text-gray-900"
+//       whileHover={{ scale: 1.1 }}
+//       whileTap={{ scale: 0.95 }}
+//     >
+//       {children}
+//     </motion.button>
+//   );
+// };
 
 const skills = [
   { name: "JavaScript", level: "Expert" },
@@ -167,11 +170,11 @@ export function ImmersiveAboutMe() {
             </div>
           </div>
         </div>
-        <footer className="text-center py-10">
+        {/* <footer className="text-center py-10">
           <MagneticButton>
             Let&apos;s Create Something Extraordinary
           </MagneticButton>
-        </footer>
+        </footer> */}
         <div className=" text-center mt-10">
           <ContactModalComponent />
         </div>
